@@ -1,5 +1,5 @@
 name: Delete null
-on: {delete: null}
+on: workflow_dispatch
 permissions: {}
 jobs:
   marker:

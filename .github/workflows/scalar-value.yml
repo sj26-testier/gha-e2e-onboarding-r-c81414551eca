@@ -1,5 +1,5 @@
 name: Delete scalar-value
-on: {delete: deleted}
+on: workflow_dispatch
 permissions: {}
 jobs:
   marker:

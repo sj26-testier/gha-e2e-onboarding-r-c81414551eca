@@ -1,5 +1,5 @@
 name: Delete tags
-on: {delete: {tags: [v1]}}
+on: workflow_dispatch
 permissions: {}
 jobs:
   marker:

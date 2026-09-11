@@ -1,5 +1,5 @@
 name: Delete empty-map
-on: {delete: {}}
+on: workflow_dispatch
 permissions: {}
 jobs:
   marker:

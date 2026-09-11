@@ -1,5 +1,5 @@
 name: Delete paths
-on: {delete: {paths: ["**"]}}
+on: workflow_dispatch
 permissions: {}
 jobs:
   marker:

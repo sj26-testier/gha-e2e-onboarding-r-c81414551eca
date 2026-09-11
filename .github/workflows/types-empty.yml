@@ -1,9 +1,9 @@
-name: Delete bootstrap-disabled
-on: workflow_dispatch
+name: Delete types-empty
+on: {delete: {types: []}}
 permissions: {}
 jobs:
   marker:
-    name: Delete bootstrap-disabled marker
+    name: Delete types-empty marker
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
@@ -11,6 +11,6 @@ jobs:
       - name: Execute default branch evidence
         env:
           DELETE_CONTEXT: '{"event_name": "${{ github.event_name }}", "action": "${{ github.event.action }}", "ref": "${{ github.ref }}", "ref_name": "${{ github.ref_name }}", "ref_type": "${{ github.ref_type }}", "sha": "${{ github.sha }}", "workflow": "${{ github.workflow }}", "workflow_ref": "${{ github.workflow_ref }}", "workflow_sha": "${{ github.workflow_sha }}", "repository": "${{ github.repository }}", "deleted_ref": "${{ github.event.ref }}", "deleted_type": "${{ github.event.ref_type }}"}'
-          DELETE_WORKFLOW_MARKER: "bootstrap:bootstrap-disabled"
+          DELETE_WORKFLOW_MARKER: "r-c81414551eca:DEFAULT-CONTENT-B:types-empty"
           DELETE_TOKEN_PROBE: ${{ github.token }}
         run: python3 delete-marker.py

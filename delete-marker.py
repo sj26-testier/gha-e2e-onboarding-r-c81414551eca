@@ -11,7 +11,7 @@ result = {
     'checkout': subprocess.check_output(['git', 'rev-parse', 'HEAD'], text=True).strip(),
     'fixture': Path('delete-fixture.txt').read_text().strip(),
     'workflow_marker': os.environ['DELETE_WORKFLOW_MARKER'],
-    'token_present': bool(os.environ.get('DELETE_TOKEN_PROBE')),
+    'token_present': bool(os.environ.get('GITHUB_TOKEN')),
     'event_file': {
         'sha256': hashlib.sha256(json.dumps(event, sort_keys=True, separators=(',', ':')).encode()).hexdigest(),
         'action_present': 'action' in event,

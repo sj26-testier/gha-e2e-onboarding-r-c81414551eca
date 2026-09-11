@@ -12,5 +12,4 @@ jobs:
         env:
           DELETE_CONTEXT: '{"event_name": "${{ github.event_name }}", "action": "${{ github.event.action }}", "ref": "${{ github.ref }}", "ref_name": "${{ github.ref_name }}", "ref_type": "${{ github.ref_type }}", "sha": "${{ github.sha }}", "workflow": "${{ github.workflow }}", "workflow_ref": "${{ github.workflow_ref }}", "workflow_sha": "${{ github.workflow_sha }}", "repository": "${{ github.repository }}", "deleted_ref": "${{ github.event.ref }}", "deleted_type": "${{ github.event.ref_type }}"}'
           DELETE_WORKFLOW_MARKER: "r-c81414551eca:DEFAULT-CONTENT-B:array"
-          DELETE_TOKEN_PROBE: ${{ github.token }}
         run: python3 delete-marker.py
